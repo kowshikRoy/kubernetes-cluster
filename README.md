@@ -106,6 +106,9 @@ kubectl get pods -o wide
 ```
 Check that the pods the being created.
 
+## Contributing
+Fork the repo, and don't forget to give a pull request
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
