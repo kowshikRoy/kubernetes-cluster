@@ -8,9 +8,9 @@ I am using MAC, but simillar procedure should work on other platforms as well.
 
 ### Prerequisites
 We need virtualbox and vagrant to run the local cluster. 
-Download and install vagrant from [here](https://www.vagrantup.com/downloads.html)
-Download and install virtualbox from [here](https://www.virtualbox.org/wiki/Downloads)
-Install vagrant plugin for faster build
+- Download and install vagrant from [here](https://www.vagrantup.com/downloads.html)
+- Download and install virtualbox from [here](https://www.virtualbox.org/wiki/Downloads)
+- Install vagrant plugin for faster build
 ```
 vagrant plugin install vagrant-cachier
 ```
