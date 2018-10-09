@@ -21,10 +21,7 @@ Clone the repo. Then run the following commands
 cd local-kubernetes-cluster
 vagrant up
 ```
-This will start 3 vms. 
-- master
-- worker1
-- worker2
+This will start 3 vms( master, worker1, worker2)
 
 In the way of installation, you can see some things like this
 ```
@@ -117,6 +114,17 @@ In this way, you can switch context to the new cluster, but it only persist for 
 - For linux, ```~/.bashrc``` or more globally ```/etc/environment```
 - For Mac, ```~/.bash_profile```
   
+## Deploy a demo app
+In the master node, run 
+``` 
+kubectl create -f https://gist.githubusercontent.com/kowshikRoy/7b74de2c087cf555ce2af17cef540e85/raw/bc9ecdaf7e86fea20a3d26f9cfc8a2a7b9a87737/demo-kube-app.yaml 
+``` 
+
+This will create a micro-service of [this](https://istio.io/docs/examples/bookinfo/) tutorial.
+
+Get nodeport using ```kubectl get -o jsonpath="{.spec.ports[0].nodePort}" services productpage```. 
+From Local Machine, go to this webpage ```192.168.99.11:$NODEPORT/productpage ``` to see the webpage
+
 ## Contributing
 Fork the repo, and don't forget to give a pull request
 
