@@ -38,7 +38,7 @@ Vagrant.configure("2") do |config|
   if Vagrant.has_plugin?("vagrant-cachier")
     config.cache.scope = :box
   end
-  add_master(config, "master", "192.168.3.3/24")
-  add_worker(config, "worker1", "192.168.3.4/24")
-  add_worker(config, "worker2", "192.168.3.5/24")
+  add_master(config, "master", "192.168.99.3/24")
+  add_worker(config, "worker1", "192.168.99.4/24")
+  add_worker(config, "worker2", "192.168.99.5/24")
 end
