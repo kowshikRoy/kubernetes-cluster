@@ -93,7 +93,7 @@ SSH into worker node. I will show example for only the worker1, you need to do t
 ```
 vagrant ssh worker1
 sudo su
-kubeadm join 192.168.3.3:6443 --token 1jaez3.5qxaaehjd5ivbj2v --discovery-token-ca-cert-hash sha256:2241d36a6d292a61b320e7779e618bef2ce961cbed26bc3c5647c12bd87dd937
+kubeadm join 192.168.99.11:6443 --token 1jaez3.5qxaaehjd5ivbj2v --discovery-token-ca-cert-hash sha256:2241d36a6d292a61b320e7779e618bef2ce961cbed26bc3c5647c12bd87dd937
 ```
 After that run ```kubectl get nodes -w```  on the master see the status. It may take some time.
 Same instruction is applicable in worker2 as well.
