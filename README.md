@@ -98,13 +98,21 @@ kubeadm join 192.168.3.3:6443 --token 1jaez3.5qxaaehjd5ivbj2v --discovery-token-
 After that run ```kubectl get nodes -w```  on the master see the status. It may take some time.
 Same instruction is applicable in worker2 as well.
 
-### Running Kubernetes
+#### Running Kubernetes
 On the master node, use this commands to check the kubernetes cluster is working properly
 ```
 kubectl run nginx --image=nginx --replicas=4
 kubectl get pods -o wide
 ```
 Check that the pods the being created.
+
+-----
+## Running Cluster from Local Machine
+- In the master node, copy the output of following command ```sudo cat /etc/kubernetes/admin.conf ```
+- Make sure that kubernetes components are installed in the local machine( In my case, it is mac). Create a file named admin.conf in ```$HOME/.kube``` directory with the above copied content
+- Run ``` export KUBECONFIG=$HOME/.kube/admin.conf ```
+- Run ``` kubectl config use-context kubernetes-admin@kubernetes ``` 
+And you are ready to go. For editional info check [here](https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/#set-the-kubeconfig-environment-variable)
 
 ## Contributing
 Fork the repo, and don't forget to give a pull request
