@@ -1,4 +1,4 @@
-# Local Kubernetes Cluster
+# Local Kubernetes Cluster [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
 A multi node cluster setup for kubernetes using vagrant and virtualbox
 
 ## Getting Started
@@ -113,7 +113,10 @@ Check that the pods the being created.
 - Run ``` export KUBECONFIG=$HOME/.kube/admin.conf ```
 - Run ``` kubectl config use-context kubernetes-admin@kubernetes ``` 
 And you are ready to go. For editional info check [here](https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/#set-the-kubeconfig-environment-variable)
-
+In this way, you can switch context to the new cluster, but it only persist for a terminal session. For more persistance, you can add  ```export KUBECONFIG=$HOME/.kube/admin.conf```environment variable to 
+- For linux, ```~/.bashrc``` or more globally ```/etc/environment```
+- For Mac, ```~/.bash_profile```
+  
 ## Contributing
 Fork the repo, and don't forget to give a pull request
 
