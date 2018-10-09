@@ -18,7 +18,7 @@ vagrant plugin install vagrant-cachier
 ### Installing
 Clone the repo. Then run the following commands
 ```
-cd local-kubernetes-cluster
+cd kubernetes-cluster
 vagrant up
 ```
 This will start 3 vms( master, worker1, worker2)
