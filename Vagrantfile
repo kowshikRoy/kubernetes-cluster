@@ -10,7 +10,7 @@ def add_master(config, name, ip)
     node.vm.provision "shell", path: "vagrant_scripts/master.sh"
     config.vm.provider "virtualbox" do |vb|
       vb.name = name
-      vb.memory = "2048"
+      vb.memory = "3072"
       vb.cpus = 2
     end
   end
@@ -26,8 +26,8 @@ def add_worker(config, name, ip)
     node.vm.provision "shell", path: "vagrant_scripts/worker.sh"
     config.vm.provider "virtualbox" do |vb|
       vb.name = name
-      vb.memory = "1024"
-      vb.cpus = 1
+      vb.memory = "3072"
+      vb.cpus = 2
     end
   end
 end 
